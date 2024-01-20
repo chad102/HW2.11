@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/store/order")
+@RequestMapping("/order")
 
 public class OrderController {
     private final OrderService orderService;
@@ -17,7 +17,7 @@ public class OrderController {
     }
 
     @GetMapping(path = "/add")
-    public void addOrder (@RequestParam("id") int id) {
+    public void addOrder (@RequestParam("id") List<Integer> id) {
         orderService.addOrder(id);
     }
 

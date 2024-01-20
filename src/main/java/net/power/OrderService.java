@@ -14,10 +14,10 @@ public class OrderService {
     public OrderService(OrderService orderService) {
         this.orderService = orderService;
     }
-    private final List<Integer> ids = new ArrayList<>();
+    private final List<Integer> ids = new ArrayList<Integer>();
 
-    public void addOrder(int id) {
-        ids.add(id);
+    public void addOrder(List<Integer> id) {
+        ids.addAll(id);
     }
 
     public List<Integer> getOrder() {
