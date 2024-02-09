@@ -10,9 +10,7 @@ import java.util.List;
 @SessionScope
 
 public class OrderService {
-    private final OrderService orderService;
     public OrderService(OrderService orderService) {
-        this.orderService = orderService;
     }
     private final List<Integer> ids = new ArrayList<Integer>();
 
